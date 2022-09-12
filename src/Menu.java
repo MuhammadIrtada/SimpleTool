@@ -11,7 +11,6 @@ public class Menu {
         tampilMenu();
         int inputMenu = sc.nextInt();
         int inputLoop;
-        final int i = 1;
         do {
             switch (inputMenu) {
                 case 0:
@@ -35,11 +34,15 @@ public class Menu {
                     break;
 
                 case 5:
-                    BuatBox.boxSiku(himpunInputKalimat());
+                    BuatImbuhan.boxSiku(himpunInputKalimat());
                     break;
 
                 case 6:
-                    Instagram.convertLink(himpunInputKalimat());
+                    BuatImbuhan.convertLinkInstagram(himpunInputKalimat());
+                    break;
+
+                case 7:
+                    BuatImbuhan.convertLinkWhattsapp(himpunInputKalimat());
                     break;
     
                 default:
@@ -80,6 +83,7 @@ public class Menu {
             "Menghilangkan New Line",
             "Buat Box",
             "Convert id to link IG",
+            "Convert nomor to link WA",
             "Keluar",
             "Masukkan Pilihan Anda!"
         };
