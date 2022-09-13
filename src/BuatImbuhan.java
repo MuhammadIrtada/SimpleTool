@@ -19,7 +19,12 @@ public class BuatImbuhan {
 
     public static void convertLinkWhattsapp(ArrayList<String> arrInputKalimat){
         for (int i = 1; i < arrInputKalimat.size(); i++) {
-            System.out.println("wa.me/" + arrInputKalimat.get(i) + "/");
+            System.out.print("wa.me/");
+            if (arrInputKalimat.get(i).charAt(0) == '0') {
+                System.out.println("62" + arrInputKalimat.get(i).substring(1));
+                continue;
+            }
+            System.out.println(arrInputKalimat.get(i));
         }
     }
 }
