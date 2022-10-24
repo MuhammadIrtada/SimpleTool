@@ -26,7 +26,7 @@ public class Menu {
                     break;
             
                 case 3:
-                    CamelCase.jadiCamelCase(himpunInputKalimat());
+                    RubahKarakter.jadiCamelCase(himpunInputKalimat());
                     break;
                 
                 case 4:
@@ -43,6 +43,10 @@ public class Menu {
 
                 case 7:
                     BuatImbuhan.convertLinkWhattsapp(himpunInputKalimat());
+                    break;
+
+                case 8:
+                    CompareData.compareDataNomer(RubahKarakter.flatNumber(CompareData.pemisahInput(himpunInputKalimat())), himpunInputKalimat());                   
                     break;
     
                 default:
@@ -84,6 +88,7 @@ public class Menu {
             "Buat Box",
             "Convert id to link IG",
             "Convert nomor to link WA",
+            "Pembanding Nomor HP",
             "Keluar",
             "Masukkan Pilihan Anda!"
         };
