@@ -27,4 +27,41 @@ public class BuatImbuhan {
             System.out.println(arrInputKalimat.get(i));
         }
     }
+
+    public static ArrayList<String> imbuhDepanBelakang(ArrayList<String> arrInputKalimat){
+        System.out.println("Menu Imbuhan :");
+        System.out.println("1. Depan\n2. Belakang\n3.Depan dan Belakang");
+
+        int menu = Menu.sc.nextInt();
+        Menu.sc.nextLine();
+
+        String imbuh2 = "";
+        
+        System.out.println("Masukkan apa yang ingin diimbuh : ");
+        String imbuh = Menu.sc.nextLine();
+
+        if (menu == 3) {
+            System.out.println("Masukkan imbuhan dibelakang : ");
+            imbuh2 = Menu.sc.nextLine();
+        }
+
+        for (int i = 0; i < arrInputKalimat.size(); i++) {
+            switch (menu) {
+                case 1:
+                    arrInputKalimat.set(i, imbuh + arrInputKalimat.get(i));
+                    break;
+                case 2:
+                    arrInputKalimat.set(i, arrInputKalimat.get(i) + imbuh);
+                    break;
+                case 3:
+                    arrInputKalimat.set(i, imbuh + arrInputKalimat.get(i) + imbuh2);
+                    break;
+            
+                default:
+                    break;
+            }
+            
+        }
+        return arrInputKalimat;
+    }
 }

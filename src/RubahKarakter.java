@@ -28,5 +28,32 @@ public class RubahKarakter {
         }
         System.out.println(baru);
         return baru;
-    }    
+    }  
+    
+    public static ArrayList<String> replaceString(){
+        System.out.println("Masukkan string yang ingin dirubah : ([before] -> [after])");
+        ArrayList<String> diubah = Menu.himpunInputKalimat();
+
+        System.out.println("Kalimat yang ingin dirubah : ");
+        ArrayList<String> terubah = Menu.himpunInputKalimat();
+
+
+        for (int i = 0; i < diubah.size(); i++) {
+            
+            String[] change = diubah.get(i).split(" -> ");
+            for (int j = 0; j < terubah.size(); j++) {
+                terubah.set(j, terubah.get(j).replaceAll(change[0], change[1]));
+            }
+        }
+        return terubah;
+    }
+
+    public static ArrayList<String> replaceIncrement(ArrayList<String> arrInputKalimat){
+        System.out.println("Masukkan apa yang ingin dirubah : ");
+        String replace = Menu.sc.nextLine();
+        for (int i = 0; i < arrInputKalimat.size(); i++) {
+            arrInputKalimat.set(i, arrInputKalimat.get(i).replaceAll(replace, "" + (i + 1)));
+        }
+        return arrInputKalimat;
+    }
 }

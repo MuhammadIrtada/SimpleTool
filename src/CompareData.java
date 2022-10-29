@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Scanner;
 
 public class CompareData {
     public static ArrayList<String> pemisahInput(ArrayList<String> arrInputKalimat){

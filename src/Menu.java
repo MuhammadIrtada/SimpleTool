@@ -10,6 +10,7 @@ public class Menu {
     public static void menu(){
         tampilMenu();
         int inputMenu = sc.nextInt();
+        sc.nextLine();
         int inputLoop;
         do {
             switch (inputMenu) {
@@ -48,6 +49,18 @@ public class Menu {
                 case 8:
                     CompareData.compareDataNomer(RubahKarakter.flatNumber(CompareData.pemisahInput(himpunInputKalimat())), himpunInputKalimat());                   
                     break;
+
+                case 9:
+                    outputHimpun(RubahKarakter.replaceString());
+                    break;
+
+                case 10:
+                    outputHimpun(BuatImbuhan.imbuhDepanBelakang(himpunInputKalimat()));
+                    break;
+
+                case 11:
+                    outputHimpun(RubahKarakter.replaceIncrement(himpunInputKalimat()));
+                    break;
     
                 default:
                     System.out.println("Pilihan tidak sesuai menu");
@@ -78,6 +91,12 @@ public class Menu {
         return arrInputKalimat;
     }
 
+    public static void outputHimpun(ArrayList<String>  arrInputKalimat){
+        for (String outString : arrInputKalimat) {
+            System.out.println(outString);
+        }
+    }
+
     public static void tampilMenu() {
         String[] menus = {
             "=====START=====",
@@ -89,6 +108,9 @@ public class Menu {
             "Convert id to link IG",
             "Convert nomor to link WA",
             "Pembanding Nomor HP",
+            "Replace String",
+            "Imbuhan Depan dan/atau Belakang",
+            "Replace Increment",
             "Keluar",
             "Masukkan Pilihan Anda!"
         };
